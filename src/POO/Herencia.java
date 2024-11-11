@@ -16,6 +16,7 @@ public class Herencia {
         
         List<Animal> lista = new ArrayList<Animal>();
         lista.add(p);
+        lista.add(g);
         lista.add(new Queco("NO", "SI", "SI", "SI", 4));
         
         for (Animal item : lista) {
