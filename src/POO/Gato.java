@@ -13,6 +13,6 @@ public class Gato extends Animal {
     
     @Override
     public void Sonido(){
-            System.out.println("El Gato maulla");
+            System.out.println("El Gato maulla");                   
     }
 }
