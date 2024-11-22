@@ -31,6 +31,12 @@ public class Televisor extends Producto{
         this.Sonido = Sonido;
     }
 
-    
+    public void resultados() {
+        System.out.println("Pantalla: " + Pantalla);
+        System.out.println("Sonido: " + Sonido);
+        System.out.println("Color: " + getColor());
+        System.out.println("Marca: " + getMarca());
+        System.out.println("Modelo: " + getModelo());
+    }
 
 }

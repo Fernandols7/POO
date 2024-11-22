@@ -14,7 +14,7 @@ public class Herencia {
         Animal p = new Perro("Negro", "SI", "SI", "SI", 4);          
         Animal g = new Gato("Blanco", "SI", "SI", "SI", 4);     
         
-        List<Animal> lista = new ArrayList<Animal>();
+        List<Animal> lista = new ArrayList<>();
         lista.add(p);
         lista.add(g);
         lista.add(new Queco("NO", "SI", "SI", "SI", 4));

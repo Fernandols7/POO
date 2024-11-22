@@ -13,13 +13,19 @@ import java.util.List;
  */
 public class FrmTelevisor extends javax.swing.JFrame {
         
-    List<Televisor> lista = new ArrayList<Televisor>();
+    List<Televisor> lista = new ArrayList<>();
     
     /**
      * Creates new form FrmTelevisor
      */
     public FrmTelevisor() {
         initComponents();
+    }
+    
+    public void mostrarTv(){
+         for (Televisor item : lista) {
+             item.resultados();
+            }
     }
 
     /**
@@ -97,7 +103,7 @@ public class FrmTelevisor extends javax.swing.JFrame {
                         .addComponent(btnAceptar)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar)))
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,9 +144,11 @@ public class FrmTelevisor extends javax.swing.JFrame {
         txtPantalla.getText(),  
         txtSonido.getText(), 
         String.valueOf(cboColor.getSelectedItem()), 
-        String.valueOf(cboMarca.getSelectedIndex()), 
+        String.valueOf(cboMarca.getSelectedItem()), 
         txtModelo.getText()
-    ));
+    ));    
+        
+        mostrarTv();
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
@@ -171,10 +179,8 @@ public class FrmTelevisor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmTelevisor().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FrmTelevisor().setVisible(true);
         });
     }
 
