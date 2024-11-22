@@ -37,6 +37,7 @@ public class Televisor extends Producto{
         System.out.println("Color: " + getColor());
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());
+        System.out.println("-------------------");
     }
 
 }
