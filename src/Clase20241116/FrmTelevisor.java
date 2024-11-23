@@ -103,7 +103,7 @@ public class FrmTelevisor extends javax.swing.JFrame {
                         .addComponent(btnAceptar)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,7 +142,7 @@ public class FrmTelevisor extends javax.swing.JFrame {
         // TODO add your handling code here:
         lista.add(new Televisor(
         txtPantalla.getText(),  
-        txtSonido.getText(), 
+        txtSonido.getText(),    
         String.valueOf(cboColor.getSelectedItem()), 
         String.valueOf(cboMarca.getSelectedItem()), 
         txtModelo.getText()

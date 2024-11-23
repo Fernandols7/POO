@@ -8,13 +8,11 @@ package Clase20241116;
 public class Vehiculo {
     private String MarcaVehiculos;
     private String ColorVehiculo;
-    private String AñoFabricacion;
     private String PrecioVehiculo;
 
     public Vehiculo(String MarcaVehiculos, String ColorVehiculo, String AñoFabricacion, String PrecioVehiculo) {
         this.MarcaVehiculos = MarcaVehiculos;
         this.ColorVehiculo = ColorVehiculo;
-        this.AñoFabricacion = AñoFabricacion;
         this.PrecioVehiculo = PrecioVehiculo;
     }
 
@@ -34,13 +32,6 @@ public class Vehiculo {
         this.ColorVehiculo = ColorVehiculo;
     }
 
-    public String getAñoFabricacion() {
-        return AñoFabricacion;
-    }
-
-    public void setAñoFabricacion(String AñoFabricacion) {
-        this.AñoFabricacion = AñoFabricacion;
-    }
 
     public String getPrecioVehiculo() {
         return PrecioVehiculo;
