@@ -32,4 +32,13 @@ public class Parlante extends Producto{
     }
         
     
+        public void resultados() {
+        System.out.println("Sonido: " + Sonido);
+        System.out.println("Rendimiento: " + Rendimiento);
+        System.out.println("Color: " + getColor());
+        System.out.println("Marca: " + getMarca());
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("-------------------");
+    }
+    
 }

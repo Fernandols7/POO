@@ -9,10 +9,8 @@ public class Auto extends Vehiculo {
     private String Carroceria;
     private String Transmision;
 
-
-    public Auto(String MarcaVehiculos, String ColorVehiculo, String AñoFabricacion, 
-                String PrecioVehiculo, String Carroceria, String Transmision) {
-        super(MarcaVehiculos, ColorVehiculo, AñoFabricacion, PrecioVehiculo);
+    public Auto(String Carroceria, String Transmision, String MarcaVehiculo, String ColorVehiculo, String PrecioVehiculo) {
+        super(MarcaVehiculo, ColorVehiculo, PrecioVehiculo);
         this.Carroceria = Carroceria;
         this.Transmision = Transmision;
     }
@@ -33,13 +31,15 @@ public class Auto extends Vehiculo {
         this.Transmision = Transmision;
     }
 
-    // Método para mostrar la información del Auto
+
+
+
     public void resAuto() {
+        System.out.println("Marca: " + getMarcaVehiculo());
+        System.out.println("Color: " + getColorVehiculo());
+        System.out.println("Precio de Vehiculo: " + getPrecioVehiculo());
         System.out.println("Carroceria: " + getCarroceria());
         System.out.println("Transmision: " + getTransmision());
-        System.out.println("Marca: " + getMarcaVehiculos());
-        System.out.println("Precio de Vehiculo: " + getPrecioVehiculo());
-        System.out.println("Color: " + getColorVehiculo());
         System.out.println("-------------------");
     }
 }

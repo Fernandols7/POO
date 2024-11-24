@@ -30,6 +30,14 @@ public class Laptop extends Producto{
     public void setTeclado(String Teclado) {
         this.Teclado = Teclado;
     }
-        
+    
+    public void resultados() {
+        System.out.println("Pantalla: " + Pantalla);
+        System.out.println("Teclado: " + Teclado);
+        System.out.println("Color: " + getColor());
+        System.out.println("Marca: " + getMarca());
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("-------------------");
+    }    
         
 }

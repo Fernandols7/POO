@@ -5,38 +5,33 @@ package Clase20241116;
  *
  * @author Fernando Lopez
  */
-public class Cajero extends CuentaBancaria{
-    private double Depositar;
-    private double Retirar;
+public class Cajero {
+    
+private double saldo;
 
-    public Cajero(double Depositar, double Retirar, double Saldo) {
-        super(Saldo);
-        this.Depositar = Depositar;
-        this.Retirar = Retirar;
+
+    public void depositar(double cantidad) {
+        if (cantidad > 0) {
+            saldo += cantidad;
+            System.out.println("Nuevo saldo: " + saldo);
+        }
     }
 
-    public double getDepositar() {
-        return Depositar;
+    public void retirar(double cantidad) {
+        if (cantidad > 0 && cantidad <= saldo) {
+            saldo -= cantidad;
+            System.out.println("Nuevo saldo: " + saldo);
+        } else if (cantidad > saldo) {
+            System.out.println("Error: Fondos insuficientes.");
+        }
     }
 
-    public void setDepositar(double Depositar) {
-        this.Depositar = Depositar;
+    public void mostrarSaldo() {
+        System.out.println("Saldo actual: " + saldo);
     }
 
-    public double getRetirar() {
-        return Retirar;
-    }
-
-    public void setRetirar(double Retirar) {
-        this.Retirar = Retirar;
+    public double getSaldo() {
+        return saldo;
     }
     
-    public void depositarDinero(){
-        System.out.println("Su saldo es: ");
-    }
-    
-    public void retitatDinero(){
-        System.out.println("Su saldo es: ");
-    }
-
 }

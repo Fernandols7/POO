@@ -6,22 +6,22 @@ package Clase20241116;
  * @author Fernando Lopez
  */
 public class Vehiculo {
-    private String MarcaVehiculos;
+    private String MarcaVehiculo;
     private String ColorVehiculo;
     private String PrecioVehiculo;
 
-    public Vehiculo(String MarcaVehiculos, String ColorVehiculo, String AñoFabricacion, String PrecioVehiculo) {
-        this.MarcaVehiculos = MarcaVehiculos;
+    public Vehiculo(String MarcaVehiculo, String ColorVehiculo, String PrecioVehiculo) {
+        this.MarcaVehiculo = MarcaVehiculo;
         this.ColorVehiculo = ColorVehiculo;
         this.PrecioVehiculo = PrecioVehiculo;
     }
 
-    public String getMarcaVehiculos() {
-        return MarcaVehiculos;
+    public String getMarcaVehiculo() {
+        return MarcaVehiculo;
     }
 
-    public void setMarcaVehiculos(String MarcaVehiculos) {
-        this.MarcaVehiculos = MarcaVehiculos;
+    public void setMarcaVehiculo(String MarcaVehiculo) {
+        this.MarcaVehiculo = MarcaVehiculo;
     }
 
     public String getColorVehiculo() {
@@ -32,7 +32,6 @@ public class Vehiculo {
         this.ColorVehiculo = ColorVehiculo;
     }
 
-
     public String getPrecioVehiculo() {
         return PrecioVehiculo;
     }
@@ -40,7 +39,5 @@ public class Vehiculo {
     public void setPrecioVehiculo(String PrecioVehiculo) {
         this.PrecioVehiculo = PrecioVehiculo;
     }
-    
-    
 
 }

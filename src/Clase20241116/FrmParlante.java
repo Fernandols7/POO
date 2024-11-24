@@ -9,21 +9,21 @@ import java.util.List;
 
 /**
  *
- * @author Fernando Lopez
+ * @author Charly Cimino
  */
-public class FrmTelevisor extends javax.swing.JFrame {
-        
-    List<Televisor> lista = new ArrayList<>();
+public class FrmParlante extends javax.swing.JFrame {
     
+    List<Parlante> lista = new ArrayList<>();
+
     /**
-     * Creates new form FrmTelevisor
+     * Creates new form FrmParlante
      */
-    public FrmTelevisor() {
+    public FrmParlante() {
         initComponents();
     }
     
-    public void mostrarTv(){
-         for (Televisor item : lista) {
+        public void mostrarParlante(){
+         for (Parlante item : lista) {
              item.resultados();
             }
     }
@@ -37,33 +37,20 @@ public class FrmTelevisor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        cboColor = new javax.swing.JComboBox<>();
+        btnAceptar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        txtPantalla = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        btnCancelar = new javax.swing.JButton();
         txtSonido = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtRendimiento = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         cboMarca = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         txtModelo = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        cboColor = new javax.swing.JComboBox<>();
-        btnAceptar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de Televisor");
-
-        jLabel1.setText("Pantalla");
-
-        jLabel2.setText("Sonido");
-
-        jLabel3.setText("Marca");
-
-        cboMarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "HP", "DELL", "LENOVO", "MSI", "LG" }));
-
-        jLabel4.setText("Modelo");
-
-        jLabel5.setText("Color");
 
         cboColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEGRO", "GRIS", "BLANCO" }));
 
@@ -74,7 +61,19 @@ public class FrmTelevisor extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Sonido");
+
         btnCancelar.setText("Cancelar");
+
+        jLabel2.setText("Rendimiento");
+
+        jLabel3.setText("Marca");
+
+        cboMarca.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LG", "SONY", "BOSE", "AKG" }));
+
+        jLabel4.setText("Modelo");
+
+        jLabel5.setText("Color");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,11 +89,11 @@ public class FrmTelevisor extends javax.swing.JFrame {
                                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE))
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtPantalla)
                             .addComponent(txtSonido)
+                            .addComponent(txtRendimiento)
                             .addComponent(cboMarca, 0, 127, Short.MAX_VALUE)
                             .addComponent(txtModelo)
                             .addComponent(cboColor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -103,7 +102,7 @@ public class FrmTelevisor extends javax.swing.JFrame {
                         .addComponent(btnAceptar)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,11 +110,11 @@ public class FrmTelevisor extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSonido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(txtSonido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRendimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -140,15 +139,15 @@ public class FrmTelevisor extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
-        lista.add(new Televisor(
-        txtPantalla.getText(),  
-        txtSonido.getText(),    
-        String.valueOf(cboColor.getSelectedItem()), 
-        String.valueOf(cboMarca.getSelectedItem()), 
-        txtModelo.getText()
-    ));    
-        
-        mostrarTv();
+        lista.add(new Parlante(
+            txtSonido.getText(),
+            txtRendimiento.getText(),
+            String.valueOf(cboColor.getSelectedItem()),
+            String.valueOf(cboMarca.getSelectedItem()),
+            txtModelo.getText()
+        ));
+
+        mostrarParlante();
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
@@ -168,19 +167,21 @@ public class FrmTelevisor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmTelevisor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmParlante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new FrmTelevisor().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmParlante().setVisible(true);
+            }
         });
     }
 
@@ -195,7 +196,7 @@ public class FrmTelevisor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField txtModelo;
-    private javax.swing.JTextField txtPantalla;
+    private javax.swing.JTextField txtRendimiento;
     private javax.swing.JTextField txtSonido;
     // End of variables declaration//GEN-END:variables
 }
